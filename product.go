@@ -211,6 +211,8 @@ func (c *Client) GetHistoricRates(product string,
 		values.Add("granularity", strconv.Itoa(params.Granularity))
 
 		requestURL = fmt.Sprintf("%s?%s", requestURL, values.Encode())
+		
+		fmt.Println("requestURL", requestURL)
 	}
 
 	_, err := c.Request("GET", requestURL, nil, &historicRates)
