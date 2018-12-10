@@ -215,7 +215,7 @@ func (c *Client) GetHistoricRates(product string,
 		fmt.Println("requestURL", requestURL)
 	}
 
-	_, err := c.Request("GET", requestURL, nil, &historicRates)
+	_, err := c.Request("GET", requestURL, params, &historicRates)
 	return historicRates, err
 }
 
